@@ -19,5 +19,6 @@ export class AppComponent {
       { id: 2, name: 'CSS' },
       { id: 3, name: 'JAVASCRIPT' },
     ],
+    dateOfBirth: new Date('12/31/2000'),
   };
 }
