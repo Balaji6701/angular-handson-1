@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple.component.css'],
 })
 export class SimpleComponent implements OnInit {
+  isShow: boolean = true;
   constructor() {}
-
+  showMessage() {
+    this.isShow = false;
+  }
   ngOnInit() {}
 }
