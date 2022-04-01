@@ -1,0 +1,29 @@
+<div>
+  <label class="strong">Employee details</label><br />
+  <label class="strong"> ID:</label>{{ employee.id }}<br />
+  <label class="strong"> Name:</label>{{ employee.name }}<br />
+  <label class="strong"> Salary:</label>{{ employee.salary | currency: 'INR'
+  }}<br />
+  <div *ngIf="employee.permanent">
+    <label class="strong"> Permanent:</label>Yes<br />
+  </div>
+  <label class="strong"> Department Id:</label>{{ employee.department.id
+  }}<br />
+  <label class="strong"> Department Name:</label>{{ employee.department.name
+  }}<br />
+  <label class="strong">Skills</label>
+  <table>
+    <thead>
+      <th>Skill Id</th>
+      <th>Skill name</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let skill of employee.skill">
+        <td>{{ skill.id }}</td>
+        <td>{{ skill.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <label class="strong">Date of birth:</label
+  >{{ employee.dateOfBirth | date: 'mediumDate' }}
+</div>
