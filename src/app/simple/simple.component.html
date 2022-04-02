@@ -1,3 +1,10 @@
 <p>Model Binding</p>
-<input type="text" value="{{ value }}" />&nbsp;
-<button (click)="incrementCount()">Add</button>
+<div>
+  <button (click)="showMessage()">Click Me!</button>
+  <div [hidden]="isHidden">Click me button clicked</div>
+</div>
+<br /><br />
+<button (click)="incrementCount(-1)"><mat-icon>remove_circle</mat-icon></button
+>&nbsp; <input style="width:50px" type="text" value="{{ value }}" />&nbsp;
+<button (click)="incrementCount(1)"><mat-icon>add_circle</mat-icon></button
+>&nbsp;

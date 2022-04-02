@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple.component.css'],
 })
 export class SimpleComponent implements OnInit {
-  isShow: boolean = true;
+  isHidden: boolean = true;
   value: number = 0;
   constructor() {}
-  incrementCount() {
-    this.value++;
+  showMessage() {
+    this.isHidden = false;
+  }
+  incrementCount(count: number) {
+    this.value += count;
   }
   ngOnInit() {}
 }
