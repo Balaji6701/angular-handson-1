@@ -1,3 +1,18 @@
 <h2>Edit Employee</h2>
-<h3>Name</h3>
-<input type="text" [formControl]="name" />
+
+<form [formGroup]="empForm">
+  <h3>Name</h3>
+  <input type="text" [formControl]="name" />
+  <h3>Salary</h3>
+  <input type="number" [formControl]="salary" />       
+  <h3>Department</h3>
+  <select formControlName="department">
+    <option
+      *ngFor="let dept of departments"
+      [selected]="dept.id == employee.department.id"
+      [ngValue]="dept.id"
+    >
+      {{ dept.name }}
+    </option>
+  </select>
+</form>
