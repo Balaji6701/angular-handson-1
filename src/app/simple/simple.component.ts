@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleComponent implements OnInit {
   isShow: boolean = true;
+  value: number = 0;
   constructor() {}
-  showMessage() {
-    this.isShow = false;
+  incrementCount() {
+    this.value++;
   }
   ngOnInit() {}
 }

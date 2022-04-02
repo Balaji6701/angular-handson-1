@@ -1,5 +1,4 @@
 import { Component, VERSION } from '@angular/core';
-import { Employee } from './employee';
 
 @Component({
   selector: 'my-app',
