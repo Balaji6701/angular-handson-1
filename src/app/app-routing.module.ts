@@ -4,10 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewEmpComponent } from './view-emp/view-emp.component';
 import { EditEmpComponent } from './edit-emp/edit-emp.component';
 import { SimpleComponent } from './simple/simple.component';
+import { EditEmpReactiveComponent } from './edit-emp-reactive/edit-emp-reactive.component';
 
 const routes: Routes = [
   { path: 'viewEmp', component: ViewEmpComponent },
-  { path: 'editEmp', component: EditEmpComponent },
+  { path: 'editEmp', component: EditEmpReactiveComponent },
   { path: 'simple', component: SimpleComponent },
 ];
 
