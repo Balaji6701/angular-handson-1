@@ -8,6 +8,7 @@ import { ViewEmpComponent } from './view-emp/view-emp.component';
 import { EditEmpComponent } from './edit-emp/edit-emp.component';
 import { SimpleComponent } from './simple/simple.component';
 import { MaterialModule } from '../material/material.module';
+import { EditEmpReactiveComponent } from './edit-emp-reactive/edit-emp-reactive.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, MaterialModule],
@@ -15,6 +16,7 @@ import { MaterialModule } from '../material/material.module';
     AppComponent,
     ViewEmpComponent,
     EditEmpComponent,
+    EditEmpReactiveComponent,
     SimpleComponent,
   ],
   bootstrap: [AppComponent],
