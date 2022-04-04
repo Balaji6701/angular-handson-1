@@ -38,7 +38,7 @@ export class EditEmpFormBuilderComponent implements OnInit {
     return this.empForm.get('name') as FormControl;
   }
   get department() {
-    return this.empForm.get('department') as FormControl;
+    return this.empForm.get('department');
   }
 
   get salary() {
@@ -55,6 +55,7 @@ export class EditEmpFormBuilderComponent implements OnInit {
       name: [this.employee.name],
       salary: [this.employee.salary],
       permanent: [this.employee.permanent],
+      department: [this.employee.department.id],
     });
   }
   onSubmit() {
