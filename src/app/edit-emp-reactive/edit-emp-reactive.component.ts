@@ -39,6 +39,14 @@ export class EditEmpReactiveComponent implements OnInit {
     return this.empForm.get('salary') as FormControl;
   }
 
+  get permanent() {
+    return this.empForm.get('permanent') as FormControl;
+  }
+
+  onSubmit() {
+    console.log(JSON.stringify(this.empForm.value));
+  }
+
   ngOnInit() {
     this.empForm = new FormGroup({
       name: new FormControl(this.employee.name, [
@@ -46,9 +54,9 @@ export class EditEmpReactiveComponent implements OnInit {
         Validators.minLength(4),
         Validators.maxLength(20),
       ]),
-      department: new FormControl(this.employee.department.id),
       salary: new FormControl(this.employee.salary),
+      permanent: new FormControl(this.employee.permanent),
+      department: new FormControl(this.employee.department.id),
     });
-    console.log(this.employee.department.id);
   }
 }
