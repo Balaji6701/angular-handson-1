@@ -3,6 +3,9 @@
 <form [formGroup]="empForm" (ngSubmit)="onSubmit()" class="block">
   <h3>Name</h3>
   <input type="text" [formControl]="name" />
+  <div style="color:red" *ngIf="name.errors?.['minlength']">
+    Name must be at least 2 characters long.
+  </div>
   <h3>Salary</h3>
   <input type="number" [formControl]="salary" />       
   <h3>Is permanent or not?</h3>

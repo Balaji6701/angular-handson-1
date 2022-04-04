@@ -61,13 +61,15 @@ export class EditEmpFormBuilderComponent implements OnInit {
   constructor(private fb: FormBuilder) {
     this.empForm = this.fb.group({
       id: [this.employee.id],
-      name: [this.employee.name],
+      name: [
+        this.employee.name,
+        [Validators.required, Validators.minLength(2)],
+      ],
       salary: [this.employee.salary],
       permanent: [this.employee.permanent],
       department: [this.employee.department.id],
       skills: this.fb.array([]),
     });
-    this.employee.skill.forEach((e) => console.log(e.name));
     this.employee.skill.forEach((e) =>
       this.skills.push(this.fb.control(e.name))
     );
