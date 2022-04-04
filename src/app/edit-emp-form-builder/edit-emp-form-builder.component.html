@@ -30,6 +30,20 @@
       </option>
     </select>
   </div>
+
+  <div formArrayName="skills">
+    <h3>Aliases</h3>
+    <button (click)="addSkill()">Add Alias</button>
+
+    <div *ngFor="let address of skills.controls; let i = index">
+      <!-- The repeated alias template -->
+      <label>
+        Skill {{ i + 1 }}:
+        <input type="text" [formControlName]="i" />
+      </label>
+    </div>
+  </div>
+
   <br />
   <div>
     <button type="submit">Submit form</button>

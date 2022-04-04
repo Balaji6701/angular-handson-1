@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -49,6 +50,14 @@ export class EditEmpFormBuilderComponent implements OnInit {
     return this.empForm.get('permanent') as FormControl;
   }
 
+  get skills() {
+    return this.empForm.get('skills') as FormArray;
+  }
+
+  addSkill() {
+    this.skills.push(this.fb.control(''));
+  }
+
   constructor(private fb: FormBuilder) {
     this.empForm = this.fb.group({
       id: [this.employee.id],
@@ -56,7 +65,13 @@ export class EditEmpFormBuilderComponent implements OnInit {
       salary: [this.employee.salary],
       permanent: [this.employee.permanent],
       department: [this.employee.department.id],
+      skills: this.fb.array([]),
     });
+    this.employee.skill.forEach((e) => console.log(e.name));
+    this.employee.skill.forEach((e) =>
+      this.skills.push(this.fb.control(e.name))
+    );
+    //this.skills.push()
   }
   onSubmit() {
     console.log(JSON.stringify(this.empForm.value));
