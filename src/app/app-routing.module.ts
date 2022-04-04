@@ -5,10 +5,11 @@ import { ViewEmpComponent } from './view-emp/view-emp.component';
 import { EditEmpComponent } from './edit-emp/edit-emp.component';
 import { SimpleComponent } from './simple/simple.component';
 import { EditEmpReactiveComponent } from './edit-emp-reactive/edit-emp-reactive.component';
+import { EditEmpFormBuilderComponent } from './edit-emp-form-builder/edit-emp-form-builder.component';
 
 const routes: Routes = [
   { path: 'viewEmp', component: ViewEmpComponent },
-  { path: 'editEmp', component: EditEmpReactiveComponent },
+  { path: 'editEmp', component: EditEmpFormBuilderComponent },
   { path: 'simple', component: SimpleComponent },
 ];
 

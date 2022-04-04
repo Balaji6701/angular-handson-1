@@ -9,6 +9,7 @@ import { EditEmpComponent } from './edit-emp/edit-emp.component';
 import { SimpleComponent } from './simple/simple.component';
 import { MaterialModule } from '../material/material.module';
 import { EditEmpReactiveComponent } from './edit-emp-reactive/edit-emp-reactive.component';
+import { EditEmpFormBuilderComponent } from './edit-emp-form-builder/edit-emp-form-builder.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { EditEmpReactiveComponent } from './edit-emp-reactive/edit-emp-reactive.
     ViewEmpComponent,
     EditEmpComponent,
     EditEmpReactiveComponent,
+    EditEmpFormBuilderComponent,
     SimpleComponent,
   ],
   bootstrap: [AppComponent],

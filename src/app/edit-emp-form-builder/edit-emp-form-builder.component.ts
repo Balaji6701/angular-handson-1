@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Employee } from '../employee';
 
 @Component({
@@ -30,18 +35,18 @@ export class EditEmpFormBuilderComponent implements OnInit {
   };
 
   get name() {
-    return this.empForm.get('name');
+    return this.empForm.get('name') as FormControl;
   }
   get department() {
-    return this.empForm.get('department');
+    return this.empForm.get('department') as FormControl;
   }
 
   get salary() {
-    return this.empForm.get('salary');
+    return this.empForm.get('salary') as FormControl;
   }
 
   get permanent() {
-    return this.empForm.get('permanent');
+    return this.empForm.get('permanent') as FormControl;
   }
 
   constructor(private fb: FormBuilder) {
@@ -52,6 +57,8 @@ export class EditEmpFormBuilderComponent implements OnInit {
       permanent: [this.employee.permanent],
     });
   }
-
+  onSubmit() {
+    console.log(JSON.stringify(this.empForm.value));
+  }
   ngOnInit() {}
 }
